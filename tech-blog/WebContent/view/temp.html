@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+This is a test
+	<div>
+		<html dir="ltr" lang="zh-cn"><head><title data-cke-title="所见即所得编辑器, editor1">所见即所得编辑器, editor1</title><style data-cke-temp="1">html{cursor:text;*cursor:auto}
+img,input,textarea{cursor:default}</style><link type="text/css" rel="stylesheet" href="http://localhost:8080/ShengPay/js/ckeditor/contents.css?t=F61A"><link type="text/css" rel="stylesheet" href="http://localhost:8080/ShengPay/js/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css"><style data-cke-temp="1">.cke_editable{cursor:text}.cke_editable img,.cke_editable input,.cke_editable textarea{cursor:default}
+.cke_contents_ltr a.cke_anchor,.cke_contents_ltr a.cke_anchor_empty,.cke_editable.cke_contents_ltr a[name],.cke_editable.cke_contents_ltr a[data-cke-saved-name]{background:url(http://localhost:8080/ShengPay/js/ckeditor/plugins/link/images/anchor.png?t=F61A) no-repeat left center;border:1px dotted #00f;background-size:16px;padding-left:18px;cursor:auto;}.cke_contents_ltr img.cke_anchor{background:url(http://localhost:8080/ShengPay/js/ckeditor/plugins/link/images/anchor.png?t=F61A) no-repeat left center;border:1px dotted #00f;background-size:16px;width:16px;min-height:15px;height:1.15em;vertical-align:text-bottom;}.cke_contents_rtl a.cke_anchor,.cke_contents_rtl a.cke_anchor_empty,.cke_editable.cke_contents_rtl a[name],.cke_editable.cke_contents_rtl a[data-cke-saved-name]{background:url(http://localhost:8080/ShengPay/js/ckeditor/plugins/link/images/anchor.png?t=F61A) no-repeat right center;border:1px dotted #00f;background-size:16px;padding-right:18px;cursor:auto;}.cke_contents_rtl img.cke_anchor{background:url(http://localhost:8080/ShengPay/js/ckeditor/plugins/link/images/anchor.png?t=F61A) no-repeat right center;border:1px dotted #00f;background-size:16px;width:16px;min-height:15px;height:1.15em;vertical-align:text-bottom;}
+.cke_show_borders  table.cke_show_border,.cke_show_borders  table.cke_show_border > tr > td, .cke_show_borders  table.cke_show_border > tr > th,.cke_show_borders  table.cke_show_border > tbody > tr > td, .cke_show_borders  table.cke_show_border > tbody > tr > th,.cke_show_borders  table.cke_show_border > thead > tr > td, .cke_show_borders  table.cke_show_border > thead > tr > th,.cke_show_borders  table.cke_show_border > tfoot > tr > td, .cke_show_borders  table.cke_show_border > tfoot > tr > th{border : #d3d3d3 1px dotted}
+.cke_widget_wrapper{position:relative;outline:none}.cke_widget_inline{display:inline-block}.cke_widget_wrapper:hover>.cke_widget_element{outline:2px solid yellow;cursor:default}.cke_widget_wrapper:hover .cke_widget_editable{outline:2px solid yellow}.cke_widget_wrapper.cke_widget_focused>.cke_widget_element,.cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused{outline:2px solid #ace}.cke_widget_editable{cursor:text}.cke_widget_drag_handler_container{position:absolute;width:15px;height:0;left:-9999px;opacity:0.75;transition:height 0s 0.2s;line-height:0}.cke_widget_wrapper:hover>.cke_widget_drag_handler_container{height:15px;transition:none}.cke_widget_drag_handler_container:hover{opacity:1}img.cke_widget_drag_handler{cursor:move;width:15px;height:15px;display:inline-block}.cke_widget_mask{position:absolute;top:0;left:0;width:100%;height:100%;display:block}.cke_editable.cke_widget_dragging, .cke_editable.cke_widget_dragging *{cursor:move !important}</style></head><body contenteditable="true" class="cke_editable cke_editable_themed cke_contents_ltr cke_show_borders" spellcheck="false"><div tabindex="-1" contenteditable="false" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_block" data-cke-display-name="代码段" data-cke-widget-id="0"><pre data-cke-widget-keep-attr="0" data-widget="codeSnippet" class="cke_widget_element" data-cke-widget-data="%7B%22classes%22%3Anull%2C%22lang%22%3A%22java%22%2C%22code%22%3A%22package%20jason.resource%3B%5Cn%5Cnimport%20javax.ws.rs.Consumes%3B%5Cnimport%20javax.ws.rs.POST%3B%5Cnimport%20javax.ws.rs.Path%3B%5Cnimport%20javax.ws.rs.core.MediaType%3B%5Cn%5Cnimport%20jason.model.BlogInfo%3B%5Cn%5Cn%40Path(%5C%22%2Fedit%5C%22)%5Cnpublic%20class%20EditorResource%20%7B%5Cn%5Cn%5Ct%40POST%5Cn%5Ct%40Path(%5C%22%2Fprocess%5C%22)%5Cn%5Ct%40Consumes(MediaType.APPLICATION_JSON)%5Cn%5Ctpublic%20void%20processBlog(BlogInfo%20blogInfo)%7B%5Cn%5Ct%5CtSystem.out.println(blogInfo.content)%3B%5Cn%5Ct%7D%5Cn%7D%5Cn%22%7D"><code class="hljs language-java"><span class="hljs-keyword">package</span> jason.resource;
+
+<span class="hljs-keyword">import</span> javax.ws.rs.Consumes;
+<span class="hljs-keyword">import</span> javax.ws.rs.POST;
+<span class="hljs-keyword">import</span> javax.ws.rs.Path;
+<span class="hljs-keyword">import</span> javax.ws.rs.core.MediaType;
+
+<span class="hljs-keyword">import</span> jason.model.BlogInfo;
+
+<span class="hljs-annotation">@Path</span>(<span class="hljs-string">"/edit"</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EditorResource</span> {</span>
+
+	<span class="hljs-annotation">@POST</span>
+	<span class="hljs-annotation">@Path</span>(<span class="hljs-string">"/process"</span>)
+	<span class="hljs-annotation">@Consumes</span>(MediaType.APPLICATION_JSON)
+	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">processBlog</span>(BlogInfo blogInfo){
+		System.out.println(blogInfo.content);
+	}
+}
+</code></pre><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" class="cke_reset cke_widget_mask"><span class="cke_reset cke_widget_drag_handler_container" style="top: -15px; left: 0px; background: url(&quot;http://localhost:8080/ShengPay/js/ckeditor/plugins/widget/images/handle.png&quot;) rgba(220, 220, 220, 0.498039);"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" width="15" title="点击并拖拽以移动" height="15"></span></div><p>This is my textarea to be replaced with CKEditor.</p></body></html>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/angular/angular.js"></script>
+</head>
+<body ng-app="ExampleAPP">
+	<div ng-controller="ExampleController">
+		<input type="button" value="GET" ng-click="getClick()" />
+		<input type="button" value="POST" ng-click="postClick()" />
+		{{name}}
+	</div>
+<script type="text/javascript">
+	var app = angular.module("ExampleAPP",[]);
+	app.controller('ExampleController',['$scope','$http',function($scope,$http){
+		$scope.name = 'jason';
+		$scope.getClick = function(){
+			$scope.data = {};
+			$scope.data.payTime = '2012-12-12 12:01:01';
+			$http.post('/TechBlog/rest/order/searchOrder',$scope.data).success(function(data){
+				$scope.order = data;
+				alert(data);
+			}).error(function(data,status){
+				alert(data);
+			});
+		};
+		$scope.postClick = function($scope,$http){
+			$scope.orderId = 2222;
+			$scope.fullName = 'jason';
+			$http.post('/TechBlog/rest/order/processOrder',$scope.order).success(function(data){
+				alert(data);
+			});
+		};
+	}]);
+
+</script>
+</html>
